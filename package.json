@@ -1,0 +1,33 @@
+{
+  "name": "todo-fancy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "nodemon": "^1.11.0",
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "dotenv": "^4.0.0",
+    "express": "~4.13.4",
+    "mongodb": "^2.2.30",
+    "mongoose": "^4.11.4",
+    "morgan": "~1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./bin/www",
+    "dev": "nodemon ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adeanugerah89/To-Do-Fancy-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adeanugerah89/To-Do-Fancy-API/issues"
+  },
+  "homepage": "https://github.com/adeanugerah89/To-Do-Fancy-API#readme"
+}
