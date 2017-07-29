@@ -1,5 +1,8 @@
 'use strict'
 //All Dependencies
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/todoFancy');
+
 const express = require('express'),
       path = require('path'),
       logger = require('morgan'),
@@ -9,6 +12,7 @@ const express = require('express'),
       //All Route Files
       routes = require('./routes/index'),
       users = require('./routes/users'),
+      api = require('./routes/api'),
 
       //Express Instance
       app = express();
@@ -22,7 +26,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/api/users', users);
+app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
