@@ -13,6 +13,7 @@ const express = require('express'),
       routes = require('./routes/index'),
       users = require('./routes/users'),
       api = require('./routes/api'),
+      todo = require('./routes/todo'),
 
       //Express Instance
       app = express();
@@ -27,6 +28,7 @@ app.use(cookieParser());
 
 app.use('/', routes);
 app.use('/api/users', users);
+app.use('/api/todo', todo);
 app.use('/api', api);
 
 // catch 404 and forward to error handler

@@ -76,7 +76,7 @@ var signIn = (req,res) => {
   User.findOne({username: req.body.username})
   .then(data => {
     if (bcrypt.compareSync(req.body.password, data.password)){
-      var token = jwt.sign({username: data.username, email: data.email}, process.env.SECRET_KEY)
+      var token = jwt.sign({username: data.username, role: data.role, id: data._id}, process.env.SECRET_KEY)
       res.send({
         msg: 'login sukses',
         token: token
